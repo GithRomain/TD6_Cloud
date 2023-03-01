@@ -1,0 +1,12 @@
+version: '3'
+services:
+    web:
+        build: .
+        ports:
+            - "5000:5000"
+        volumes:
+            - ./file.txt:/app/file.txt
+    mongodb:
+        image: mongo:latest
+        volumes:
+            - ./db:/data/db
